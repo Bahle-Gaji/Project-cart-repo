@@ -15,7 +15,7 @@ table {
     margin:  10px auto;
 }
 
-#container {
+.container {
     margin-top: 10px;
     border: black solid 4px;
     width: 50vw;
