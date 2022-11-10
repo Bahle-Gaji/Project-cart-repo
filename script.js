@@ -31,7 +31,7 @@ function addToCart(){
             clearTable();
         }
         else{
-            console.log(cart); /* DELETE. to check correct output*/
+//             console.log(cart); DELETE. to check correct output
         };
     }
     else if(input < 0 || input > 3 || input == ''){
