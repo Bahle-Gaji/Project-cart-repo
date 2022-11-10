@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+th {
+    width: 100px;
+}
+
+table {
+    text-align: center;
+    border: 5px black solid;
+    margin:  10px auto;
+}
+
+#container {
+    margin-top: 10px;
+    border: black solid 4px;
+    width: 50vw;
+    padding: 0 25px 25px ;
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    border-color: white;
+}
+
+#footer {
+    align-items: flex-end;
+    border: black solid 2px;
+}
