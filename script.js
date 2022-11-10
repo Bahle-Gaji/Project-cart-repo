@@ -19,3 +19,70 @@ function clearInput(){
     document.getElementById('input-el').value = '';
 };
 
+
+function addToCart(){
+    let input = document.getElementById('input-el').value;
+    let tableExists = document.getElementById('cart-table');
+
+    
+        if(input == 99){
+            if(tableExists == null){
+                cart = [];
+            }
+        }
+        else if(input < 0 || input > 3 || input == ''){
+            alert('Please choose an item');
+        }
+        else{
+            cart.push(stockItems[input - 1]);
+            console.log(cart);
+            addCartTable();
+            return cart;
+        }
+};
+
+
+function addCartTable(){
+
+    //To create table and first row when the first item is added to cart
+    let makeCartTable = function(){
+        const tableHead = document.createElement('table');
+        tableHead.setAttribute('id', 'cart-table');
+        tableHead.innerHTML = `<thead>
+        <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        </tr>
+        </thead>
+        <tbody id='cart-body'>
+        </tbody>`
+        
+        document.getElementById('cart').appendChild(tableHead);
+    }
+
+    let addRows = function (){
+        let tableRow = document.createElement('tr');
+        tableRow.innerHTML = `<td>${cart.name}</td>
+        <td>${cart.name}</td>
+        <td>${cart.count}</td>
+        <td>${cart.price}</td>`
+
+        document.getElementById('cart-body').appendChild(tableRow)
+    }
+
+    //Here is where the first row is added
+    if(cart.length <= 1){
+        makeCartTable();
+        addRows();
+       
+    }else{
+        addRows();
+    }
+}
+
+
+//When user clears table by inputting 99
+function clearTable(){
+}
