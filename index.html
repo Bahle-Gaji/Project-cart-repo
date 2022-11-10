@@ -11,7 +11,7 @@
     <div id="wrapper">
 
     <h1>Code College Menu </h1>
-        <div id="container">
+        <div class="container">
             <h1>Stock Items</h1>
             <div id="items-section">
                 <table>
@@ -44,9 +44,10 @@
                 </table>
             </div>
         </div>
-         <div id="container">
+         <div class="container cart-container">
              <h1>Cart</h1>
              <div id="cart-section">
+                <p>To add an item to cart, input stock item ID and click add to cart. To cancel cart, input 99 instead.</p>
                 <input type="text" id="input-el" placeholder="Enter item #" value="">
                 <button id="add-to-cart" onclick="addToCart(); clearInput()">Add to cart</button>
                 <div id="cart">
